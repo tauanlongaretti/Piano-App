@@ -1,2 +1,2 @@
 # Piano-App
-A piano create with React
+A piano created with React
