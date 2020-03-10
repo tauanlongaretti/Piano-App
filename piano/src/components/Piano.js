@@ -4,7 +4,7 @@ import PianoKeys from "./Images/PianoKeys.png";
 const Piano = () => {
     return (
         <div>
-            <img src={PianoKeys}/>
+            <img src={PianoKeys} alt="piano keys"/>
         </div>
     )
 }
