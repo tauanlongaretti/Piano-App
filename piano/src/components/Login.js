@@ -7,7 +7,7 @@ import {
     Row
   } from "reactstrap";
 
-const Login = () => {
+const Login = props => {
     const [user, setUser] = useState({
         username: "",
         password: ""
@@ -17,10 +17,15 @@ const Login = () => {
         setUser({ ...user, [event.target.name]: event.target.value})
     }
 
+    const handleSubmit = event => {
+        event.preventDefault();
+        props.history.push("/piano")
+    }
+
     return(
         <div>
             <h3>Welcome to the Piano App!</h3>
-            <Form className="login-form">
+            <Form onSubmit={handleSubmit} className="login-form">
                 <Row>
                     <Input 
                     type="text"

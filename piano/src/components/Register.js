@@ -7,7 +7,7 @@ import {
     Row
   } from "reactstrap";
 
-const Register = () => {
+const Register = props => {
     const [newUser, setNewUser] = useState({
         username: "",
         password: ""
@@ -17,10 +17,15 @@ const Register = () => {
         setNewUser({ ...newUser, [event.target.name]: event.target.value })
     }
 
+    const handleSubmit = event => {
+        event.preventDefault();
+        props.history.push("/")
+    }
+
     return(
         <div>
             <h3>Music is only a few steps away!</h3>
-            <Form className="register-form">
+            <Form onSubmit={handleSubmit} className="register-form">
                 <Row>
                     <Input 
                     type="text"
@@ -40,7 +45,7 @@ const Register = () => {
                     />
                 </Row>
                 <Row>
-                    <Button>Register</Button>
+                    <Button color="primary">Register</Button>
                 </Row>
             </Form>
             <p>Already have an account?</p>
