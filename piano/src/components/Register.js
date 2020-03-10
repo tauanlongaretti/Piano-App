@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
     Button,
     Container,
@@ -13,22 +14,27 @@ import {
 
 const Register = () => {
     return(
-        <Form className="register-form">
-            <Row>
-                <Input 
-                  type="text"
-                  name="username" 
-                  placeholder="Username" 
-                />
-            </Row>
-            <Row>
-                <Input 
-                  type="text"
-                  name="password" 
-                  placeholder="Password" 
-                />
-            </Row>
-        </Form>
+        <div>
+            <h3>Music is only a few steps away!</h3>
+            <Form className="register-form">
+                <Row>
+                    <Input 
+                    type="text"
+                    name="username" 
+                    placeholder="Username" 
+                    />
+                </Row>
+                <Row>
+                    <Input 
+                    type="text"
+                    name="password" 
+                    placeholder="Password" 
+                    />
+                </Row>
+            </Form>
+            <p>Already have an account?</p>
+            <p><Link to="/">Login</Link> here!</p>
+        </div>
     )
 }
 
