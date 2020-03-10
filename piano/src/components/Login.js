@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom";
 import {
     Button,
     Container,
@@ -13,22 +14,27 @@ import {
 
 const Login = () => {
     return(
-        <Form className="login-form">
-            <Row>
-                <Input 
-                  type="text"
-                  name="username" 
-                  placeholder="Username" 
-                />
-            </Row>
-            <Row>
-                <Input 
-                  type="text"
-                  name="password" 
-                  placeholder="Password" 
-                />
-            </Row>
-        </Form>
+        <div>
+            <h3>Welcome to the Piano App!</h3>
+            <Form className="login-form">
+                <Row>
+                    <Input 
+                    type="text"
+                    name="username" 
+                    placeholder="Username" 
+                    />
+                </Row>
+                <Row>
+                    <Input 
+                    type="text"
+                    name="password" 
+                    placeholder="Password" 
+                    />
+                </Row>
+            </Form>
+            <p>Don't have an account?</p>
+            <p><Link to="/register">Register</Link> here!</p>
+        </div>
     )
 }
 
