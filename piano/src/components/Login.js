@@ -7,14 +7,28 @@ import {
     FormGroup,
     FormText,
     Input,
-    Label
+    Label,
+    Row
   } from "reactstrap";
 
 const Login = () => {
     return(
-        <div>
-            <h1>I am a login component</h1>
-        </div>
+        <Form className="login-form">
+            <Row>
+                <Input 
+                  type="text"
+                  name="username" 
+                  placeholder="Username" 
+                />
+            </Row>
+            <Row>
+                <Input 
+                  type="text"
+                  name="password" 
+                  placeholder="Password" 
+                />
+            </Row>
+        </Form>
     )
 }
 
