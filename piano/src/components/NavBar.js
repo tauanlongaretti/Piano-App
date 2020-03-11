@@ -4,7 +4,7 @@ import { Nav } from 'react-bootstrap';
 
 const NavBar = () => {
     return (
-        <Nav variant="tabs" defaultActiveKey="/">
+        <Nav variant="tabs">
             <Nav.Item>
                 <Nav.Link as={Link} href="/" to="/">Login</Nav.Link>
             </Nav.Item>

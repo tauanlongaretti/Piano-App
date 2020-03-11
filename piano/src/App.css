@@ -42,68 +42,81 @@ span {
 }
 
 .piano-keys {
-  background-color: white;
+  background-color: transparent;
   border: none;
   position: absolute;
 }
 
 .piano-keys:nth-of-type(1) {
-  left: 65%;
-  bottom: 17%;
+  left: 62%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(2) {
   left: 68%;
-  bottom: 50%;
+  bottom: 42.6%;
+  padding: 8.7% 1%;
+  color: white;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(3) {
-  left: 73%;
-  bottom: 17%;
+  left: 70.1%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(4) {
-  left: 25%;
-  bottom: 17%;
+  left: 21.6%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(5) {
-  left: 28%;
-  bottom: 50%;
+  left: 27.8%;
+  padding: 8.7% 0.9%;
+  color: white;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(6) {
-  left: 32%;
-  bottom: 17%;
+  left: 29.6%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(7) {
-  left: 36%;
-  bottom: 50%;
+  left: 35.7%;
+  padding: 8.7% 0.9%;
+  color: white;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(8) {
-  left: 40.5%;
-  bottom: 17%;
+  left: 38%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(9) {
-  left: 49%;
-  bottom: 17%;
+  left: 46%;
+  bottom: 0%;
+  padding: 6% 3.5%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(10) {
   left: 52%;
-  bottom: 50%;
+  padding: 8.7% 1%;
+  color: white;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(11) {
-  left: 56.5%;
-  bottom: 17%;
+  left: 54%;
+  bottom: 0%;
+  padding: 6% 3.3%;
   border: 1px solid red;
 }
 .piano-keys:nth-of-type(12) {
   left: 60%;
-  bottom: 50%;
+  padding: 8.7% 0.9%;
+  color: white;
   border: 1px solid red;
 }
