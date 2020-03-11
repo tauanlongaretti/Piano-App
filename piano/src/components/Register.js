@@ -25,7 +25,7 @@ const Register = props => {
 
     return(
         <div className="register-component">
-            <h3>Music is only a few steps away!</h3>
+            <h3><span>Music</span> is only a few steps away!</h3>
             <Form onSubmit={handleSubmit} className="register-form">
                 <FormGroup>
                     <Input 
