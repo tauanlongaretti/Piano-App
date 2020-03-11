@@ -1,11 +1,14 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
+import { ButtonToolbar } from "react-bootstrap";
+import FacebookLoginButton from "react-social-login-buttons";
 import {
     Button,
     Form,
+    FormGroup,
     Input,
     Row
-  } from "reactstrap";
+} from "reactstrap";
 
 const Login = props => {
     const [user, setUser] = useState({
@@ -14,7 +17,7 @@ const Login = props => {
     })
 
     const handleChange = event => {
-        setUser({ ...user, [event.target.name]: event.target.value})
+        setUser({ ...user, [event.target.name]: event.target.value })
     }
 
     const handleSubmit = event => {
@@ -22,34 +25,31 @@ const Login = props => {
         props.history.push("/piano")
     }
 
-    return(
-        <div>
-            <h3>Welcome to the Piano App!</h3>
+    return (
+        <div className="login-component">
+            <h3>Welcome to the <span>Piano App!</span></h3>
             <Form onSubmit={handleSubmit} className="login-form">
-                <Row>
-                    <Input 
-                    type="text"
-                    name="username" 
-                    placeholder="Username"
-                    value={user.username}
-                    onChange={handleChange} 
-                    />
-                </Row>
-                <Row>
-                    <Input 
-                    type="text"
-                    name="password" 
-                    placeholder="Password"
-                    valeu={user.password}
-                    onChange={handleChange} 
-                    />
-                </Row>
-                <Row>
-                    <Button>Login</Button>
-                </Row>
+                    <FormGroup>
+                        <Input
+                            type="text"
+                            name="username"
+                            placeholder="Username"
+                            value={user.username}
+                            onChange={handleChange}
+                        />
+                    </FormGroup>
+                    <FormGroup className="text-center">
+                        <Input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            valeu={user.password}
+                            onChange={handleChange}
+                        />
+                    </FormGroup>
+                    <Button className="btn-lg btn-dark btn-block">Login</Button>
             </Form>
-            <p>Don't have an account?</p>
-            <p><Link to="/register">Register</Link> here!</p>
+            <p>Don't have an account? <Link to="/register"> Register here</Link></p>
         </div>
     )
 }

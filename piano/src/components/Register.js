@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {
     Button,
     Form,
+    FormGroup,
     Input,
     Row
   } from "reactstrap";
@@ -23,10 +24,10 @@ const Register = props => {
     }
 
     return(
-        <div>
+        <div className="register-component">
             <h3>Music is only a few steps away!</h3>
             <Form onSubmit={handleSubmit} className="register-form">
-                <Row>
+                <FormGroup>
                     <Input 
                     type="text"
                     name="username" 
@@ -34,22 +35,19 @@ const Register = props => {
                     value={newUser.username}
                     onChange={handleChange} 
                     />
-                </Row>
-                <Row>
+                </FormGroup>
+                <FormGroup>
                     <Input 
-                    type="text"
+                    type="password"
                     name="password" 
                     placeholder="Password"
                     value={newUser.username}
                     onChange={handleChange} 
                     />
-                </Row>
-                <Row>
-                    <Button color="primary">Register</Button>
-                </Row>
+                </FormGroup>
+                    <Button className="btn-lg btn-dark btn-block">Register</Button>
             </Form>
-            <p>Already have an account?</p>
-            <p><Link to="/">Login</Link> here!</p>
+            <p>Already have an account? <Link to="/">Login here</Link></p>
         </div>
     )
 }
