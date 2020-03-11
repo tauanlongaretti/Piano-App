@@ -1,13 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
-import { ButtonToolbar } from "react-bootstrap";
-import FacebookLoginButton from "react-social-login-buttons";
 import {
     Button,
     Form,
     FormGroup,
-    Input,
-    Row
+    Input
 } from "reactstrap";
 
 const Login = props => {

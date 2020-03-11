@@ -41,7 +41,7 @@ class Piano extends Component {
     RenderButtons = () => {
         return pianoSounds.map(( soundObj, index ) => {
             return (
-                <button key={index} onClick={() => this.SoundPlay(soundObj.sound)}>
+                <button className="piano-keys" key={index} onClick={() => this.SoundPlay(soundObj.sound)}>
                     {soundObj.label}
                 </button>
             )
@@ -51,7 +51,7 @@ class Piano extends Component {
     render() {
         Howler.volume(1.0)
     return (
-        <div>
+        <div className="piano-container">
             <img className="piano-pic" src={PianoKeys} alt="piano keys"/>
             {this.RenderButtons()}
         </div>

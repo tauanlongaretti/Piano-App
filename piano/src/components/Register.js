@@ -4,8 +4,7 @@ import {
     Button,
     Form,
     FormGroup,
-    Input,
-    Row
+    Input
   } from "reactstrap";
 
 const Register = props => {
